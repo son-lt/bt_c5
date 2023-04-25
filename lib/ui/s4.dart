@@ -18,19 +18,22 @@ class S4 extends StatelessWidget {
     return WillPopScope(
       onWillPop: () async {
         if (arguments.s1Text.isEmpty) {
-          Navigator.popUntil(
+          Navigator.popAndPushNamed(
             context,
-            ModalRoute.withName(RouteConfig.s1),
+            RouteConfig.s1,
+            arguments: arguments,
           );
         } else if (arguments.s2Text.isEmpty) {
-          Navigator.popUntil(
+          Navigator.popAndPushNamed(
             context,
-            ModalRoute.withName(RouteConfig.s1),
+            RouteConfig.s2,
+            arguments: arguments,
           );
         } else if (arguments.s3Text.isEmpty) {
-          Navigator.popUntil(
+          Navigator.popAndPushNamed(
             context,
-            ModalRoute.withName(RouteConfig.s3),
+            RouteConfig.s3,
+            arguments: arguments,
           );
         }
         return false;

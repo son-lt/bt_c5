@@ -24,9 +24,10 @@ class S3 extends StatelessWidget {
       descriptionText:
           'Create profiles\nfor different members &\nget personalised\nrecommendations',
       onContinue: () {
-        Navigator.popAndPushNamed(
+        Navigator.pushNamedAndRemoveUntil(
           context,
           RouteConfig.s4,
+          (Route<dynamic> route) => false,
           arguments: arguments.copyWith(
             s3Text: _controller.text.trim(),
           ),
