@@ -42,7 +42,7 @@ class S4 extends StatelessWidget {
         backgroundPath: AppImages.s4Background,
         controller: _controller,
         descriptionText:
-            '${arguments.s1Text}\n${arguments.s2Text}\n${arguments.s3Text}',
+            'S1: ${arguments.s1Text}\nS2: ${arguments.s2Text}\nS3: ${arguments.s3Text}',
         onContinue: () {
           if (arguments.s1Text.isNotEmpty &&
               arguments.s2Text.isNotEmpty &&
